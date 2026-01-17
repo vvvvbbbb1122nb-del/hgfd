@@ -1,0 +1,8 @@
+
+{
+  "name": "IPIAL - Sistema de Exames de Acesso",
+  "description": "Uma plataforma integrada para gestão de candidatos, exames e resultados para o Instituto Politécnico Industrial 'Alda Lara'. Automatiza o processo de inscrição, classificação e geração de relatórios.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

@@ -1,0 +1,54 @@
+<!-- Publications Page -->
+<div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+        <div>
+            <h3 style="font-size: 20px; font-weight: 900; margin: 0;">📢 Publicação de Resultados</h3>
+            <p style="color: #64748b; font-size: 14px; margin-top: 8px;">Controle a visibilidade das listas</p>
+        </div>
+        <div id="publishStatusBadge" class="status-badge draft">
+            ○ Privado
+        </div>
+    </div>
+
+    <div class="publication-content">
+        <button id="togglePublish" class="publish-button active" style="width: 100%;">
+            🔓 Publicar Resultados Agora
+        </button>
+
+        <button id="previewBtn" class="btn-secondary" style="width: 100%; margin-top: 12px;">
+            👁️ Pré-visualizar Página Pública
+        </button>
+    </div>
+
+    <div id="downloadSection" style="display: none; margin-top: 32px; padding-top: 32px; border-top: 1px solid #e2e8f0;">
+        <h4 style="font-weight: 700; margin-bottom: 16px;">⬇️ Descarregar Listas Publicadas</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <button id="downloadListaCsvBtn" class="btn-secondary">📊 Exportar como CSV</button>
+            <button id="downloadListaPdfBtn" class="btn-secondary">📄 Exportar como PDF</button>
+            <button id="downloadAprovadosCsvBtn" class="btn-secondary">✓ Aprovados (CSV)</button>
+            <button id="downloadAprovadosPdfBtn" class="btn-secondary">✓ Aprovados (PDF)</button>
+        </div>
+    </div>
+
+    <div style="margin-top: 32px; padding-top: 32px; border-top: 1px solid #e2e8f0;">
+        <h4 style="font-weight: 700; margin-bottom: 16px;">📋 Listas que serão geradas:</h4>
+        <div class="list-grid">
+            <div class="list-item">
+                <p class="list-item-title">Lista Geral</p>
+                <p class="list-item-desc">Todos os inscritos por ordem alfabética</p>
+            </div>
+            <div class="list-item">
+                <p class="list-item-title">Aprovados</p>
+                <p class="list-item-desc">Filtrados com nota ≥ 10</p>
+            </div>
+            <div class="list-item">
+                <p class="list-item-title">Reprovados</p>
+                <p class="list-item-desc">Nota < 10</p>
+            </div>
+            <div class="list-item">
+                <p class="list-item-title">Ranking Especial</p>
+                <p class="list-item-desc">Top 100 melhores notas</p>
+            </div>
+        </div>
+    </div>
+</div>

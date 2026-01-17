@@ -1,0 +1,35 @@
+<!-- Login Page -->
+<div class="login-container">
+    <form class="login-form" id="loginForm">
+        <div class="login-header">
+            <div class="login-logo">I</div>
+            <h1 class="login-h1">IPIAL</h1>
+            <p class="login-subtitle">Sistema de Gestão de Exames</p>
+        </div>
+
+        <div id="loginError" class="error-message" style="display: none;">
+            <span id="errorText"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Utilizador</label>
+            <input type="text" id="username" class="form-input" placeholder="admin" required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Palavra-passe</label>
+            <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="submit-button">Acesso Restrito</button>
+
+        <div class="login-divider">
+            <button type="button" id="publicBtn" class="public-button">
+                🔍 Consultar Resultados (Público)
+            </button>
+            <p class="status-text">
+                <span id="publishStatus">⚪ Aguardando Publicação</span>
+            </p>
+        </div>
+    </form>
+</div>

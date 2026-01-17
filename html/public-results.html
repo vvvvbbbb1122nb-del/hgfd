@@ -1,0 +1,71 @@
+<!-- Public Results Page -->
+<div style="padding: 32px;">
+    <div class="public-header no-print">
+        <div>
+            <h1 class="public-title">📊 Resultados dos Exames - 2025</h1>
+            <p class="public-subtitle">IPIAL - Instituto Politécnico Industrial "Alda Lara"</p>
+        </div>
+        <button id="backBtn" class="btn-secondary">← Voltar</button>
+    </div>
+
+    <div id="publicUnavailable" style="display: none; text-align: center; padding: 50px 0;">
+        <h1 style="font-size: 32px; font-weight: 900; margin-bottom: 16px;">🔒 Resultados Indisponíveis</h1>
+        <p style="color: #64748b; margin-bottom: 32px;">As listas ainda não foram publicadas.</p>
+    </div>
+
+    <div id="publicContent" style="display: none;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 32px;">
+            <div class="card" style="text-align: center;">
+                <p style="color: #64748b; font-size: 12px; margin: 0 0 8px 0;">Total</p>
+                <p style="font-size: 32px; font-weight: 900; color: #2563eb; margin: 0;" id="pubTotal">0</p>
+            </div>
+            <div class="card" style="text-align: center; border-top: 4px solid #22c55e;">
+                <p style="color: #64748b; font-size: 12px; margin: 0 0 8px 0;">Aprovados</p>
+                <p style="font-size: 32px; font-weight: 900; color: #22c55e; margin: 0;" id="pubApproved">0</p>
+            </div>
+            <div class="card" style="text-align: center; border-top: 4px solid #ef4444;">
+                <p style="color: #64748b; font-size: 12px; margin: 0 0 8px 0;">Reprovados</p>
+                <p style="font-size: 32px; font-weight: 900; color: #ef4444; margin: 0;" id="pubRejected">0</p>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 32px;">
+            <div class="card">
+                <h3 style="margin-bottom: 16px;">🏆 Top 10 Melhores Notas</h3>
+                <div id="topRanking" style="display: flex; flex-direction: column; gap: 12px;">
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 style="margin-bottom: 16px;">🔍 Consultar Resultado Individual</h3>
+                <input type="text" id="searchBiPublic" class="form-input" placeholder="Digite o seu BI/Passaporte" style="margin-bottom: 16px;">
+                <div id="publicSearchResult"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 style="margin-bottom: 16px;">📋 Todos os Resultados</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Foto</th>
+                            <th>Nº</th>
+                            <th>Nome</th>
+                            <th>BI</th>
+                            <th>Curso</th>
+                            <th style="text-align: center;">Nota</th>
+                            <th style="text-align: center;">Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="publicTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div style="margin-top: 32px; padding-top: 16px; border-top: 1px solid #e2e8f0; text-align: center; color: #64748b; font-size: 12px;">
+            <p style="margin: 0;" id="publishDate">Publicado em: --</p>
+        </div>
+    </div>
+</div>

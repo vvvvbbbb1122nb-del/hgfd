@@ -1,0 +1,43 @@
+<!-- Dashboard Stats -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-bottom: 32px;">
+    <div class="stat-card">
+        <div class="stat-icon total">📊</div>
+        <div>
+            <p class="stat-label">Inscritos</p>
+            <p class="stat-number" id="statTotal">0</p>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon approved">✓</div>
+        <div>
+            <p class="stat-label">Aprovados</p>
+            <p class="stat-number" id="statApproved">0</p>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon rejected">✗</div>
+        <div>
+            <p class="stat-label">Reprovados</p>
+            <p class="stat-number" id="statRejected">0</p>
+        </div>
+    </div>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">📊 Distribuição por Curso</h4>
+        </div>
+        <div id="courseDistribution" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">📋 Atividade Recente</h4>
+        </div>
+        <div class="activity-list" id="activityList">
+            <p style="color: #94a3b8; font-style: italic;">Sem atividade</p>
+        </div>
+    </div>
+</div>

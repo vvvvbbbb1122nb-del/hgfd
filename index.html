@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPIAL - Sistema de Gestão de Exames</title>
+    
+    <!-- CSS Modular -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/admin-layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div id="app"></div>
+
+    <!-- JavaScript Modular -->
+    <script src="js/constants.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/export-import.js"></script>
+    <script src="js/sync.js"></script>
+    
+    <!-- HTML Template Loader -->
+    <script src="js/html-loader.js"></script>
+    
+    <!-- Render Functions -->
+    <script src="js/render-pages.js"></script>
+    <script src="js/render-dashboard.js"></script>
+    <script src="js/render-publications.js"></script>
+    
+    <!-- Event Listeners -->
+    <script src="js/listeners.js"></script>
+    <script src="js/listeners-forms.js"></script>
+    
+    <!-- Inicialização -->
+    <script>
+        // Inicializar aplicação
+        async function initApp() {
+            // Carregar todos os templates primeiro
+            await HTMLLoader.loadAllTemplates();
+            
+            // Depois inicializar a aplicação
+            await Storage.init();
+            await appState.init();
+            
+            // Inicializar sincronização com servidor
+            dataSync.init();
+            
+            render();
+            
+            // Sincronizar quando usuário sai da aba ou fecha página
+            window.addEventListener('blur', () => {
+                if (typeof dataSync !== 'undefined') {
+                    console.log('[Sync] Página perdeu foco, sincronizando...');
+                    dataSync.syncToServer().then(() => dataSync.syncFromServer());
+                }
+            });
+            
+            // Sincronizar quando página ganha foco novamente
+            window.addEventListener('focus', () => {
+                if (typeof dataSync !== 'undefined') {
+                    console.log('[Sync] Página voltou ao foco, sincronizando...');
+                    dataSync.syncFromServer();
+                }
+            });
+            
+            // Sincronizar quando página está prestes a ser fechada
+            window.addEventListener('beforeunload', () => {
+                if (typeof dataSync !== 'undefined') {
+                    console.log('[Sync] Página sendo fechada, sincronizando...');
+                    dataSync.syncToServer();
+                }
+            });
+        }
+        
+        // Chamar ao carregar a página
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>

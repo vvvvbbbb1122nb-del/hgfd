@@ -1,0 +1,247 @@
+/* ====================================
+   RESPONSIVO E UTILITIES
+   ==================================== */
+
+/* Print */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    .sidebar,
+    .main-header {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    @page {
+        margin: 1cm;
+    }
+}
+
+/* Tablets e abaixo */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .app-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--gray-200);
+        position: static;
+        height: auto;
+    }
+
+    .sidebar-header {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .sidebar-logo {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .sidebar-title {
+        font-size: 14px;
+    }
+
+    .sidebar-subtitle {
+        font-size: 12px;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .nav-button {
+        flex: 1;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .sidebar-footer {
+        flex-direction: row;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    .footer-button {
+        flex: 1;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 16px;
+    }
+
+    .main-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .add-button {
+        width: 100%;
+    }
+
+    .login-container {
+        padding: 16px;
+    }
+
+    .login-form {
+        max-width: 100%;
+    }
+
+    .form-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .form-field {
+        grid-column: auto !important;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px 4px;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+
+    .public-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .list-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .btn-secondary,
+    .btn-danger,
+    .btn-primary,
+    .publish-button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .btn-sm {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+
+    .activity-list {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    .app-container {
+        gap: 0;
+    }
+
+    .sidebar-nav {
+        flex-direction: column;
+    }
+
+    .sidebar-footer {
+        flex-direction: column;
+    }
+
+    .main-header {
+        margin-bottom: 16px;
+    }
+
+    .header-title {
+        font-size: 18px;
+    }
+
+    .login-logo {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+
+    .login-h1 {
+        font-size: 24px;
+    }
+
+    .submit-button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .public-button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .stat-number {
+        font-size: 24px !important;
+    }
+
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    table {
+        font-size: 11px;
+    }
+
+    .public-title {
+        font-size: 24px;
+    }
+}
+
+/* Utilities */
+.no-print {
+    /* utilizado para esconder elementos na impressão */
+}
+
+/* Scrollbar customizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-400);
+}

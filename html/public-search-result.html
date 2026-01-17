@@ -1,0 +1,26 @@
+<!-- Public Search Result -->
+<div id="publicSearchNotFound" style="padding: 12px; background-color: #fef2f2; border-radius: 6px; color: #991b1b;">
+    ℹ️ Candidato não encontrado
+</div>
+
+<div id="publicSearchFound" style="display: none; padding: 16px; background-color: #f8fafc; border-radius: 6px; border-left: 4px solid #2563eb;">
+    <div style="display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center;">
+        <img id="searchPhoto" src="" style="width: 80px; height: 100px; object-fit: cover; border-radius: 4px; display: none;">
+        <div id="searchPhotoPlaceholder" style="width: 80px; height: 100px; background-color: #e2e8f0; border-radius: 4px;"></div>
+        <div>
+            <p id="searchName" style="margin: 0; font-weight: 700; font-size: 16px;"></p>
+            <p id="searchBi" style="margin: 4px 0; font-size: 12px; color: #64748b;"></p>
+            <p id="searchCourse" style="margin: 4px 0; font-size: 12px; color: #64748b;"></p>
+            <div style="margin-top: 12px; display: flex; gap: 16px;">
+                <div>
+                    <span style="font-size: 12px; color: #64748b;">Nota</span>
+                    <p id="searchScore" style="margin: 0; font-weight: 900; font-size: 20px; color: #2563eb;"></p>
+                </div>
+                <div>
+                    <span style="font-size: 12px; color: #64748b;">Resultado</span>
+                    <p id="searchStatus" style="margin: 0; font-weight: 700; padding: 4px 8px; border-radius: 4px; display: inline-block;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

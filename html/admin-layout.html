@@ -1,0 +1,43 @@
+<!-- Admin Layout -->
+<div class="app-container no-print">
+    <aside class="sidebar no-print">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">I</div>
+            <div>
+                <p class="sidebar-title">IPIAL</p>
+                <p class="sidebar-subtitle">Gestão Académica</p>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <button class="nav-button active" data-tab="dashboard">
+                📊 Dashboard
+            </button>
+            <button class="nav-button" data-tab="candidates">
+                👥 Candidatos
+            </button>
+            <button class="nav-button" data-tab="publications">
+                📄 Publicações
+            </button>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button class="footer-button" id="exportBtn">⬇️ Exportar JSON</button>
+            <button class="footer-button" id="importBtn">⬆️ Importar JSON</button>
+            <input type="file" id="fileInput" accept=".json" style="display:none">
+            <button class="footer-button logout" id="logoutBtn">🚪 Sair</button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="main-header no-print">
+            <div>
+                <h2 class="header-title" id="pageTitle">📊 Dashboard</h2>
+                <p class="header-subtitle">IPIAL • Sistema de Exames de Acesso 2025</p>
+            </div>
+            <button class="add-button" id="addBtn" style="display: none;">+ Inscrever Candidato</button>
+        </div>
+
+        <div id="content"></div>
+    </main>
+</div>

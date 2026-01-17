@@ -1,0 +1,65 @@
+<!-- Candidate Form -->
+<div class="card" style="max-width: 700px; margin: 0 auto;">
+    <h3 style="margin-bottom: 24px; font-size: 18px; font-weight: 700;">
+        <span id="formTitle">➕ Novo Candidato</span>
+    </h3>
+    <form id="candidateForm" class="form-container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-field" style="grid-column: 1 / -1;">
+                <label class="form-label">📸 Foto do Candidato</label>
+                <div style="display: flex; gap: 16px; align-items: flex-start;">
+                    <div id="photoPreview" style="width: 120px; height: 160px; background-color: #f1f5f9; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 2px dashed #cbd5e1; overflow: hidden;">
+                        <span style="text-align: center; color: #94a3b8; font-size: 12px;">Clique para adicionar foto</span>
+                    </div>
+                    <input type="file" id="photoInput" accept="image/*" style="display:none">
+                    <input type="hidden" id="photoData" name="photo" value="">
+                    <div style="flex: 1;">
+                        <p style="font-size: 12px; color: #64748b; margin: 0 0 8px 0;">Formatos: JPG, PNG (máx. 2MB)</p>
+                        <button type="button" id="uploadPhotoBtn" class="btn-secondary">Escolher Imagem</button>
+                        <button type="button" id="removePhotoBtn" class="btn-danger" style="margin-left: 8px; display: none;">Remover</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-field" style="grid-column: 1 / -1;">
+                <label class="form-label">Nome Completo *</label>
+                <input type="text" name="fullName" class="form-input" value="" required>
+            </div>
+            <div class="form-field">
+                <label class="form-label">BI/Passaporte *</label>
+                <input type="text" name="idNumber" class="form-input" value="" required>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Contacto *</label>
+                <input type="tel" name="contact" class="form-input" value="" required>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Idade *</label>
+                <input type="number" name="age" class="form-input" value="18" min="15" required>
+            </div>
+            <div class="form-field" style="grid-column: 1 / -1;">
+                <label class="form-label">Curso *</label>
+                <select name="course" class="form-select" required>
+                    <option value="">Selecione um Curso</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Nota *</label>
+                <input type="number" name="score" class="form-input" value="0" min="0" max="20" step="0.1" required>
+                <p style="font-size: 11px; color: #64748b; margin-top: 4px;">ℹ️ Nota ≥ 10 = Aprovado | Nota < 10 = Reprovado</p>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Estado *</label>
+                <div style="padding: 10px; background-color: #f1f5f9; border-radius: 6px; border: 1px solid #cbd5e1; color: #64748b; font-size: 12px;">
+                    <strong>Automático:</strong> Baseado na nota acima
+                </div>
+                <input type="hidden" name="status" value="">
+            </div>
+            <div style="grid-column: 1 / -1; display: flex; gap: 12px; margin-top: 8px;">
+                <button type="submit" class="btn-primary">Guardar</button>
+                <button type="button" class="btn-secondary" id="cancelBtn">Cancelar</button>
+            </div>
+        </div>
+        <input type="hidden" id="candidateId" value="">
+    </form>
+</div>
